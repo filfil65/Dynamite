@@ -12,6 +12,7 @@ public class MyBot implements Bot {
 	private int enemyDynamite;
 	private ArrayList<Move> myMoves;
 	private ArrayList<Move> enemyMoves;
+	private ArrayList<String> resultList;
 	// public Move myMove;
 	private int round;
 	private int tie;
@@ -24,8 +25,9 @@ public class MyBot implements Bot {
 	public MyBot() {
 		myMoves = new ArrayList<Move>();
 		enemyMoves = new ArrayList<Move>();
+		resultList = new ArrayList<String>();
 		gamestate = new Gamestate();
-		myDynamite = 100;
+		myDynamite = 98;
 		enemyDynamite = 100;
 		round = 0;
 		antiDynamite = false;
@@ -125,6 +127,30 @@ public class MyBot implements Bot {
 		}
 		round++;
 		return Move.D;
+	}
+	
+	private Move getMove(String move) {
+		Move myMove;
+		switch(move) {
+		case "r":
+			myMove = Move.R;
+			break;
+		case "p":
+			myMove = Move.P;
+			break;
+		case "s":
+			myMove = Move.S;
+			break;
+		case "w":
+			myMove = Move.W;
+			break;
+		case "d":
+			myMove = Move.D;
+			break;
+		default:
+			myMove = Move.R;
+		}
+		return myMove;
 	}
 
 //	private Move getRandom() {
