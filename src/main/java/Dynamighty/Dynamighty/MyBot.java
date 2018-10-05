@@ -49,6 +49,8 @@ public class MyBot implements Bot {
 		counterMove.put(Move.W, getRandom(false));
 
 	}
+	
+	
 
 	public Move makeMove(Gamestate gamestate) {
 		this.gamestate = gamestate;
