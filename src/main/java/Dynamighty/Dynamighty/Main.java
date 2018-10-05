@@ -11,12 +11,13 @@ import com.softwire.dynamite.game.Round;
 public class Main 
 {
 	public static void main(String arg[]) {
-		Bot b1 = new MyBot();
-		Bot b2 = new MyBot();
+		Bot b1 = new NewMyBotOld();
+		Bot b2 = new MyBotOld();
 		fight(b1, b2);
 	}
 
 	public static void fight(Bot SamBotOne, Bot SamBotTwo) {
+		System.out.println("start");
 		Gamestate gamestate = new Gamestate();
 		gamestate.setRounds(new ArrayList<Round>());
 		int p1score = 0;
